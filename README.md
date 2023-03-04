@@ -17,6 +17,11 @@ The Laravel project together with its DB are deployed in docker, the necessary d
 docker-compose up
 ```
 
+2º Run to execute Migrations
+```bash
+docker exec -it purple-hexagon_store-API-RESTful_php php artisan migrate
+```
+
 ## Start
 
 Start php laravel proyect (If it was stopped).
