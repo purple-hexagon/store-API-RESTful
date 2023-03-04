@@ -86,6 +86,20 @@ docker exec -it purple-hexagon_store-API-RESTful_php bash
   punto de quedarse sin stock, o si la operación es imposible por falta de stock.
 
   PUT http://127.0.0.1:8000/api/v1/products/buy/{shopId}
-    
+
+## API testing with Postman
+
+Import Postman Collections for API endpoint testing from the following file:
+
+[Efraín-Store-API-RESTful-Collection.postman_collection.json](postman/Efraín-Store-API-RESTful-Collection.postman_collection.json)
+
+The parameters passed in Postman requests are in Json format in: Body > raw.
+
+![Postman parameters](postman/postman-body-raw.jpg "Preview Postman parameters")
+
+The Postman API requests are prepared to be executed in order from the first to the last, otherwise they could change records needed for another request.
+
+![Postman Collection](postman/postman-collection.jpg "Preview Postman Collection")
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
