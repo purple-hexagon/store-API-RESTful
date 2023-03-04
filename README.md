@@ -53,5 +53,39 @@ docker exec -it purple-hexagon_store-API-RESTful_mariadb bash
 docker exec -it purple-hexagon_store-API-RESTful_php bash
 ```
 
+### API endpoints
+
+- Listado de las tiendas con número de productos de cada una.
+  
+  GET http://127.0.0.1:8000/api/v1/shops
+
+
+- Descripción de una tienda, con el listado de productos de la misma y
+  cantidad.
+
+  GET http://127.0.0.1:8000/api/v1/shops/{shopId}
+
+
+- Creación de una tienda. Posibilidad de pasarle una colección o array de
+  productos para almacenarlos en base de datos.
+
+  POST http://127.0.0.1:8000/api/v1/shops
+
+  
+- Edición de una tienda.
+
+  PUT http://127.0.0.1:8000/api/v1/shops/{shopId}
+
+
+- Eliminación de una tienda.
+
+  DELETE http://127.0.0.1:8000/api/v1/shops/{shopId}
+
+
+- Venta de producto, con aviso en la respuesta si la tienda está a
+  punto de quedarse sin stock, o si la operación es imposible por falta de stock.
+
+  PUT http://127.0.0.1:8000/api/v1/products/buy/{shopId}
+    
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
