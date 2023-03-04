@@ -22,6 +22,18 @@ docker-compose up
 docker exec -it purple-hexagon_store-API-RESTful_php php artisan migrate
 ```
 
+3º Run to execute Seeders
+```bash
+docker exec -it purple-hexagon_store-API-RESTful_php php artisan db:seed
+```
+
+## Util
+
+Reset database
+```bash
+docker exec -it purple-hexagon_store-API-RESTful_php php artisan migrate:fresh --seed
+```
+
 ## Start
 
 Start php laravel proyect (If it was stopped).
